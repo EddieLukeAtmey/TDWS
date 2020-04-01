@@ -113,25 +113,25 @@ typedef void(^error_callback)(NSURLSessionDataTask *__unused task, NSError *erro
     switch (method) {
         case HTTP_METHOD_GET:
         {
-            task = [[AFAppDotNetAPIClient sharedClient] GET:path parameters:params progress:nil success:successcallback failure:error_callback];
+            task = [[AFAppDotNetAPIClient sharedClient] GET:path parameters:params headers:nil progress:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_POST:
         {
-            task = [[AFAppDotNetAPIClient sharedClient] POST:path parameters:params progress:nil success:successcallback failure:error_callback];
+            task = [[AFAppDotNetAPIClient sharedClient] POST:path parameters:params headers:nil progress:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_DELETE:
         {
-            task = [[AFAppDotNetAPIClient sharedClient] DELETE:path parameters:params success:successcallback failure:error_callback];
+            task = [[AFAppDotNetAPIClient sharedClient] DELETE:path parameters:params headers:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_PUT:
         {
-            task = [[AFAppDotNetAPIClient sharedClient] PUT:path parameters:params success:successcallback failure:error_callback];
+            task = [[AFAppDotNetAPIClient sharedClient] PUT:path parameters:params headers:nil success:successcallback failure:error_callback];
             break;
         }
             
@@ -249,25 +249,25 @@ typedef void(^error_callback)(NSURLSessionDataTask *__unused task, NSError *erro
     switch (method) {
         case HTTP_METHOD_GET:
         {
-            task = [client GET:path parameters:params progress:nil success:successcallback failure:error_callback];
+            task = [client GET:path parameters:params headers:nil progress:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_POST:
         {
-            task = [client POST:path parameters:params progress:nil success:successcallback failure:error_callback];
+            task = [client POST:path parameters:params headers:nil progress:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_DELETE:
         {
-            task = [client DELETE:path parameters:params success:successcallback failure:error_callback];
+            task = [client DELETE:path parameters:params headers:nil success:successcallback failure:error_callback];
             break;
         }
             
         case HTTP_METHOD_PUT:
         {
-            task = [client PUT:path parameters:params success:successcallback failure:error_callback];
+            task = [client PUT:path parameters:params headers:nil success:successcallback failure:error_callback];
             break;
         }
             
