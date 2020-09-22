@@ -11,7 +11,6 @@
 #endif
 
 #import "AFAppDotNetAPIClient.h"
-#import "NSDictionary+TDJSON.h"
 #import "NSError+XPMessage.h"
 #import "TDService.h"
 #import "TDWS.h"
